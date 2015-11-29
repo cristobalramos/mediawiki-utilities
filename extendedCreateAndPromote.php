@@ -21,6 +21,7 @@
  * @ingroup Maintenance
  * @author Rob Church <robchur@gmail.com>
  * @author Pablo Castellano <pablo@anche.no>
+ * @author Cristóbal Ramos <cristobalramosmerino@gmail.com>
  */
 
 require_once __DIR__ . '/Maintenance.php';
@@ -40,7 +41,7 @@ class ExtendedCreateAndPromote extends Maintenance {
 		$this->mDescription = "Create a new user account and/or grant it additional rights";
 		$this->addOption(
 			'force',
-			'If acccount exists already, just grant it rights or change password.'
+			'If acccount exists already, just grant it rights, change info or password.'
 		);
 		foreach ( self::$permitRoles as $role ) {
 			$this->addOption( $role, "Add the account to the {$role} group" );
